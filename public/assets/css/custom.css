@@ -1,0 +1,263 @@
+.login-logo {
+    width: 110px;
+}
+
+.brand {
+    width: 160px;
+}
+
+.login-failed-message {
+    color: rgb(255, 0, 0);
+    font-size: 1.3rem;
+    float: left;
+    margin: .5rem 0 1rem 0;
+}
+
+.change-periode {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+    border-radius: 3px;
+}
+
+.change-periode.active {
+    background: var(--mainColor) !important;
+    color: #fff;
+}
+
+.loading {
+    background: rgb(219, 219, 219);
+    color: rgb(219, 219, 219);
+    padding-right: 10px;
+}
+
+.loader {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.loader4 {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    padding: 0px;
+    border-radius: 100%;
+    border: 5px solid;
+    border-top-color: var(--mainColor);
+    border-bottom-color: rgb(225, 225, 225);
+    border-left-color: var(--mainColor);
+    border-right-color: rgb(225, 225, 225);
+    -webkit-animation: loader4 1s ease-in-out infinite;
+    animation: loader4 1s ease-in-out infinite;
+}
+
+@keyframes loader4 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader4 {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.btn-table-action {
+    border: none;
+    border-radius: 3px;
+    padding: .3rem .6rem;
+    color: #fff;
+    transition: .3s;
+}
+
+.btn-table-action.edit {
+    background: #ffaa00;
+}
+
+.btn-table-action.delete {
+    background: #c91d1d;
+}
+
+.btn-table-action.detail {
+    background: #06adad;
+}
+
+.btn-table-action[disabled="disabled"] {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.date-picker {
+    background-color: transparent !important;
+}
+
+.month-picker {
+    background-color: transparent !important;
+}
+
+.custom-table {
+    width: 100%;
+}
+
+.custom-table tbody tr td {
+    padding: .5rem 0 .5rem 2rem;
+}
+
+.transaksi-tambah-produk {
+    border: none;
+    background: transparent;
+    color: var(--mainColor);
+}
+
+#transaksi-produk .row.invalid p {
+    color: #d30505;
+}
+
+#transaksi-produk .row.invalid select,
+#transaksi-produk .row.invalid input,
+#transaksi-produk .row input.invalid {
+    border: 1px solid #d30505;
+}
+
+.items-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    justify-items: center;
+}
+
+.item-wrapper {
+    box-shadow: 0 0 10px 1px #ededed;
+    width: 225px;
+    border-radius: 6px;
+    padding: 0;
+}
+
+.item-image {
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: rgb(238, 238, 238);
+    background-position: center;
+    background-size: cover;
+}
+
+.item-detail {
+    position: relative;
+    padding: 1.25rem;
+    background-color: rgb(252, 252, 252);
+}
+
+.item-name {
+    margin-top: 0;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-detail .tes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-detail .item-left p {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.btn-delete-item {
+    position: absolute;
+    right: 5rem;
+    bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #bb1e1e;
+    color: #fff;
+}
+
+.btn-edit-item {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffaa00;
+    color: #fff;
+}
+
+.input-gambar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-gambar .img-preview {
+    width: 200px;
+    height: 150px;
+    border-radius: 6px;
+    background-color: rgb(225, 225, 225);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 3rem;
+}
+
+.input-gambar .choose-img-file {
+    display: none;
+}
+
+@media screen and (max-width: 1335px) {
+    .item-wrapper {
+        width: 200px;
+    }
+
+    .item-image {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1499px) {
+    .items-row {
+        gap: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1599px) {
+    .items-row {
+        gap: 5rem;
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1699px) {
+    .items-row {
+        gap: 6.5rem;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .items-row {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 5rem;
+    }
+}
