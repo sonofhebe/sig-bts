@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
     {
         // Creating a user with the specified username and password
         DB::table('users')->insert([
-            'name' => 'Test User',
+            'name' => 'Adminn',
             'username' => 'tes@gmail.com',
             'password' => Hash::make('test'),
         ]);
