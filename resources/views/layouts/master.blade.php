@@ -77,7 +77,7 @@
 
 <body>
     <!-- Loader block -->
-    <div id="loader" hidden>
+    <div id="loader" style="display: none;">
         <i class="fas fa-spinner fa-spin" style="font-size: 5rem;"></i>
         <p>Loading...</p>
     </div>
@@ -112,12 +112,20 @@
                 <nav>
                     <ul class="nav">
                         <li>
+                            <a href="/dashboard" class="{{ Request::is('dashboard') ? 'active' : '' }}"><i
+                                    class="fal fa-columns"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
                             <a href="/bts" class="{{ Request::is('bts') ? 'active' : '' }}"><i
                                     class="fal fa-satellite-dish"></i> <span>Data BTS</span></a>
                         </li>
                         <li>
                             <a href="/report" class="{{ Request::is('report') ? 'active' : '' }}"><i
                                     class="fal fa-file-signature"></i> <span>Report BTS</span></a>
+                        </li>
+                        <li>
+                            <a href="/user" class="{{ Request::is('user') ? 'active' : '' }}"><i
+                                    class="fal fa-users"></i> <span>User Master</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -146,11 +154,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $('#loader').hide();
         });
-    </script>
+    </script> --}}
     <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery/jquery-ui.js') }}"></script>
     <script src="{{ asset('assets/scripts/chart.min.js') }}"></script>

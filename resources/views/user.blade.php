@@ -4,10 +4,9 @@
         <div class="col-md-12">
             <div class="panel panel-headline">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Data Report BTS</h3>
+                    <h3 class="panel-title">Data User</h3>
                     <div class="right">
-                        <a href="/report/form" class="btn btn-primary"><i class="far fa-plus"></i>&nbsp; Tambah data report
-                            BTS</a>
+                        <a href="/user/form" class="btn btn-primary"><i class="far fa-plus"></i>&nbsp; Tambah data User</a>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -37,7 +36,7 @@
             function getBts() {
                 $('#loader').show();
                 $.ajax({
-                    url: "/report/get",
+                    url: "/user/get",
                     method: "GET",
                     success: function(result) {
                         $('#loader').hide();
@@ -55,27 +54,21 @@
                 $('#datatable').DataTable({
                     data: data,
                     columns: [{
-                            title: 'BTS',
-                            data: 'nama_bts'
+                            title: 'Name',
+                            data: 'name'
                         },
                         {
-                            title: 'Tingkat Kepentingan',
-                            data: 'tingkat_kepentingan'
-                        },
-                        {
-                            title: 'Kategori Report',
-                            data: 'kategori'
-                        },
-                        {
-                            title: 'Deskripsi',
-                            data: 'deskripsi'
+                            title: 'Username/Email',
+                            data: 'username'
                         },
                         {
                             title: 'Aksi',
                             data: null,
                             orderable: false,
                             render: function(data, type, row) {
-                                return '<a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                return '<a class="btn btn-info btn-sm" href="/user/form?id=' +
+                                    row.id +
+                                    '">Edit</a><a class="btn btn-danger btn-sm delete-data" data-id="' +
                                     row.id +
                                     '" href="javascript:;">Delete</a>';
                             }
@@ -84,8 +77,15 @@
                 });
             }
 
+            function createMap(mapId, latitude, longitude) {
+                var map = L.map(mapId).setView([latitude, longitude], 14);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+                L.marker([latitude, longitude]).addTo(map);
+                map.removeControl(map.zoomControl);
+            }
+
             $('#datatable').on('click', '.delete-data', function() {
-                var btsId = $(this).data('id');
+                var rowId = $(this).data('id');
                 Swal.fire({
                     title: 'Are you sure?',
                     text: 'You won\'t be able to revert this!',
@@ -96,15 +96,15 @@
                     confirmButtonText: 'Yes, delete it!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        deleteBTSRecord(btsId);
+                        deleteBTSRecord(rowId);
                     }
                 });
             });
 
-            function deleteBTSRecord(btsId) {
+            function deleteBTSRecord(rowId) {
                 $('#loader').show();
                 $.ajax({
-                    url: '/report/delete/' + btsId,
+                    url: '/user/delete/' + rowId,
                     method: 'DELETE',
                     success: function(result) {
                         $('#loader').hide();
@@ -114,13 +114,12 @@
                         }, 2000);
                     },
                     error: function(error) {
-                        console.error('Error deleting Report record:', error);
+                        console.error('Error deleting BTS record:', error);
                         Swal.fire('Error!', 'Failed to delete the record.', 'error');
                         $('#loader').hide();
                     }
                 });
             }
-
         });
     </script>
 @endsection

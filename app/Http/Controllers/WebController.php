@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bts;
+use App\Models\User;
 use App\Models\Produk;
 use App\Models\Report;
 use App\Models\TProduk;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class WebController extends Controller
@@ -40,39 +42,94 @@ class WebController extends Controller
 
     public function get_dashboard()
     {
-        $produk = Produk::all();
-        $total_terjual = TProduk::all()->sum('jumlah');
-        $produkSort = [];
+        $totalBts = Bts::count();
+        $totalReport = Report::whereYear('created_at', date('Y'))->count();
 
-        foreach ($produk as $p) {
-            $produkSort[] = [
-                "nama" => $p->nama,
-                "terjual" => $p->tproduk->sum('jumlah')
-            ];
+        $monthlyData = [];
+        for ($month = 1; $month <= 12; $month++) {
+            $totalData = Report::whereYear('created_at', date('Y'))
+                ->whereMonth('created_at', $month)
+                ->count();
+
+            $monthlyData[] = $totalData;
         }
 
-        usort($produkSort, function ($a, $b) {
-            return $a['terjual'] < $b['terjual'];
-        });
-
-        $produkTerlaris = array_slice($produkSort, 0, 5);
-
-        $chart_data = [];
-        foreach ($produkSort as $ps) {
-            $chart_data["label"][] = $ps["nama"];
-            $chart_data["value"][] = $ps["terjual"];
-        }
+        $totalReportByBts = Report::selectRaw('nama_bts, COUNT(*) as total')
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('nama_bts')
+            ->get();
 
         $response = [
             "response" => "success",
-            "produk_terlaris" => $produkTerlaris,
-            "total_terjual" => $total_terjual,
-            "total_produk" => $produk->count(),
-            "chart_data" => $chart_data
+            "data" => [
+                "totalBts" => $totalBts,
+                "totalReport" => $totalReport,
+                "chartData" => $monthlyData,
+                "totalReportByBts" =>  $totalReportByBts,
+            ]
+        ];
+
+        return response()->json($response);
+    }
+
+    // USER
+    public function get_user()
+    {
+        $user = User::all();
+
+        $response = [
+            "response" => "success",
+            "data" => $user
+        ];
+        return response()->json($response);
+    }
+    public function user_store(Request $request)
+    {
+        $request->merge(['password' => Hash::make($request->input('password'))]);
+        $data_user = $request->input();
+        if ($user = User::create($data_user)) {
+            $response = [
+                "response" => "success",
+                "data" => $user
+            ];
+            return response()->json($response);
+        }
+    }
+    public function user_update(Request $request)
+    {
+        $data_user = User::find($request->input('id'));
+        if ($request->has('password')) {
+            $request->merge(['password' => Hash::make($request->input('password'))]);
+        }
+        if ($user = $data_user->update($request->input())) {
+            $response = [
+                "response" => "success",
+                "data" => $user
+            ];
+            return response()->json($response);
+        }
+    }
+    public function user_delete($id)
+    {
+        $user = User::find($id)->forceDelete();
+        if ($user) {
+            $response = [
+                "response" => "success",
+            ];
+            return response()->json($response);
+        }
+    }
+    public function user_getById($id)
+    {
+        $user = User::find($id);
+        $response = [
+            "response" => "success",
+            "data" => $user
         ];
         return response()->json($response);
     }
 
+    // BTS
     public function get_bts()
     {
         $bts = Bts::all();
@@ -125,7 +182,7 @@ class WebController extends Controller
         return response()->json($response);
     }
 
-
+    // REPORT
     public function report_get()
     {
         $bts = Report::all();

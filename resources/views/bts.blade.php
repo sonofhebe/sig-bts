@@ -69,11 +69,7 @@
                             }
                         },
                         {
-                            title: 'Title',
-                            data: 'title'
-                        },
-                        {
-                            title: 'title',
+                            title: 'BTS',
                             data: 'title'
                         },
                         {
@@ -88,7 +84,7 @@
                                 return '<a class="btn btn-info btn-sm" href="/bts/form?id=' +
                                     row.id +
                                     '">Detail</a>\
-                                                                                                        <a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                                                                                                    <a class="btn btn-danger btn-sm delete-data" data-id="' +
                                     row
                                     .id +
                                     '" href="javascript:;">Delete</a>';
@@ -134,9 +130,9 @@
                     url: '/bts/delete/' + btsId,
                     method: 'DELETE',
                     success: function(result) {
+                        $('#loader').hide();
                         Swal.fire('Deleted!', 'Your record has been deleted.', 'success');
                         setTimeout(function() {
-                            $('#loader').hide();
                             window.location.reload();
                         }, 2000);
                     },
