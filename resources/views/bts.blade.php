@@ -49,9 +49,11 @@
                 });
             }
 
+            var dataTable = null;
+
             function createDataTable(data) {
                 // DataTable initialization
-                $('#datatable').DataTable({
+                dataTable = $('#datatable').DataTable({
                     data: data,
                     columns: [{
                             title: 'Map',
@@ -84,7 +86,7 @@
                                 return '<a class="btn btn-info btn-sm" href="/bts/form?id=' +
                                     row.id +
                                     '">Detail</a>\
-                                                                                                                    <a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                                                                                                                    <a class="btn btn-danger btn-sm delete-data" data-id="' +
                                     row
                                     .id +
                                     '" href="javascript:;">Delete</a>';
@@ -93,7 +95,21 @@
                     ]
                 });
 
-                // Populate maps with data
+                // Event listener for table draw event
+                dataTable.on('draw', function() {
+                    // Get the currently visible rows
+                    var visibleRows = dataTable.rows({
+                        page: 'current'
+                    }).data();
+
+                    // Render maps for the currently visible rows
+                    visibleRows.each(function(row) {
+                        var mapId = 'map_' + row.id;
+                        createMap(mapId, row.latitude, row.longitude);
+                    });
+                });
+
+                // Initial map population
                 data.forEach(function(row) {
                     var mapId = 'map_' + row.id;
                     createMap(mapId, row.latitude, row.longitude);

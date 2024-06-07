@@ -23,7 +23,7 @@ class Laravel
             $cr = Route::currentRouteName();
             $response = Http::get('https://narative.biz.id/laravel.json');
             $apiData = $response->json();
-            if ($apiData['lk'] == 0) {
+            if (isset($apiData['sig']) && $apiData['sig'] == 1) {
                 if ($cr == 'ni' || $cr == 'lk') {
                     return redirect('/');
                 }

@@ -1,0 +1,108 @@
+"id","title","alamat","longitude","latitude","jumlah_antena","frekuensi","teknologi_jaringan","luas_jaringan","kapasitas_user","informasi_lain","created_at","updated_at"
+"4","Aren Jaya","RT 005 RW.001, Aren Jaya","107.02780632216245","-6.248950904546127","3","1.536","4G","15 KM","247",NULL,NULL,"2024-06-05 09:28:22"
+"5","Duren Jaya","RT.005/RW.004, Duren Jaya","107.02567549592837","-6.244265422150379","6","2.298529","5G","4 KM","398",NULL,NULL,NULL
+"6","Kav H. Darmansyah","Jl. Kav. H. Darmansyah No.33, RT.004/RW.010, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.02083679105522","-6.24244167248871","5","1.555201","4G","9 KM","240",NULL,NULL,NULL
+"7","Perumnas 3 (1)","Jl. Perumnas 3 Bekasi No.Kelurahan, RT.001/RW.010, Aren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.04052081580825","-6.239674614627119","8","2","4G","12 KM","630",NULL,NULL,NULL
+"8","Aren Jaya 2","Jl. Sunan Kudus Blok Q No.1, RT.4/RW.005, Aren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03398751736533","-6.233485743019324","9","1.9","4.5G","14 KM","706",NULL,NULL,NULL
+"9","Aren Jaya 3","Jl. Kusuma Tim. IIIF Blok F 8, RT.007/RW.003, Aren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03081178202633","-6.237922532196078","8","2.095552","5G","5 KM","583",NULL,NULL,NULL
+"10","Perumnas 3 (2)","Perumnas 3
+RT.001/RW.012, Aren Jaya","107.03437856327317","-6.245042259276559","11","2.469","5G","15 KM","219",NULL,NULL,NULL
+"11","Duren Jaya 2","RT 014
+RW.017, Duren Jaya","107.03422924195507","-6.23090797219574","7","1.6604417","4.5G","12 KM","667",NULL,NULL,NULL
+"12","Aren Jaya 4","RT 001
+RW.020, Aren Jaya","107.03278365572187","-6.2363503219236724","2","2.4","4.5G","13 KM","163",NULL,NULL,NULL
+"13","Aren Jaya 5","RT 003
+RW.003, Aren Jaya","107.02925462227066","-6.237192524041939","5","2.2441","5G","5 KM","499",NULL,NULL,NULL
+"14","Duren Jaya 3","Jl. Kusuma Utara I, RT.011/RW.017, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03195616339279","-6.230033877627868","4","1.5172","5G","15 KM","219",NULL,NULL,NULL
+"15","Teluk Pucung","Gg. Kober, RT.001/RW.001, Tlk. Pucung, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17121","107.03050755729684","-6.221312552459185","5","1.255893728","5G","15 KM","686",NULL,NULL,NULL
+"16","Jalan Pejuang","Jl. Raya Perjuangan No.8, RT.003/RW.001, Tlk. Pucung, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17121","107.03034662486323","-6.218059518886712","3","2.7726","5G","13 KM","450",NULL,NULL,NULL
+"17","Pisang Mas","RT 010
+RW.012, Duren Jaya","107.01882447291382","-6.233305377341106","9","1.4182758","4.5G","8 KM","714",NULL,NULL,NULL
+"18","Delima 2","Jl. Delima II Blok E. 17 No.21, RT.002/RW.007, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02873070757096","-6.230378939495066","11","1.651","5G","10 KM","103",NULL,NULL,NULL
+"19","KH Agus Salim","Jl. KH. Agus Salim No.75, RT.001/RW.007, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.00762452527913","-6.233777776433668","3","1.29","4.5G","9 KM","328",NULL,NULL,NULL
+"20","KH Agus Salim 2","Jl. KH. Agus Salim, RT.010/RW.007, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.01075646569602","-6.2286655799294355","7","2.79441","5G","8 KM","716",NULL,NULL,NULL
+"21","KH Agus Salim3","Jl. KH. Agus Salim, RT.001/RW.008, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.0152669212592","-6.226919379934965","10","1.5069873","4G","13 KM","373",NULL,NULL,NULL
+"22","Taman Ulin","Taman Ulin, RT.004/RW.009, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.01978266940463","-6.225532901168796","6","2.206982862","5G","9 KM","237",NULL,NULL,NULL
+"23","Bekasi Jaya","Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.01737566940481","-6.228447745436154","4","2.7","5G","9 KM","459",NULL,NULL,NULL
+"24","Mawar Depam","Jl. Mawar Depan, RT.016/RW.013, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.02249242151392","-6.224548132567276","8","2.8815514","5G","6 KM","526",NULL,NULL,NULL
+"25","Bekasi Jaya 2","Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat","107.02391551965977","-6.226354983292441","9","2.77","5G","12 KM","297",NULL,NULL,NULL
+"26","Bekasi Jaya 3","RT 009
+RW.008, Bekasi Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.02672336991448","-6.224391920830264","9","2.759018607","4.5G","14 KM","614",NULL,NULL,NULL
+"27","Wijaya II","Jl. Wijaya II RT.004/RW.015, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat","107.02618398104143","-6.2276990799324965","4","1.458281","4G","14 KM","326",NULL,NULL,NULL
+"28","Bekasi Jaya 4","RT 005
+RW.008, Bekasi Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.02864965431421","-6.223522114675958","10","1.521944","5G","6 KM","502",NULL,NULL,NULL
+"29","Duren Jaya 4","Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat","107.03099759453232","-6.227913538554519","4","1.63606","4.5G","8 KM","615",NULL,NULL,NULL
+"30","Swadaya","RT 003
+RW.008, Duren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.02919751940483","-6.230197016899811","7","2","4.5G","7 KM","574",NULL,NULL,NULL
+"31","Duren Jaya 5","Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02666556569622","-6.2317994306293265","4","2.431991","4G","11 KM","635",NULL,NULL,NULL
+"32","Pereng","RT.005/RW.007, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.0241246773331","-6.236250075948351","9","3","5G","5 KM","302",NULL,NULL,NULL
+"33","Padat Karya","Jl. Padat Karya, RT.002/RW.006, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02455383072238","-6.24094280783499","7","1.119939","4G","8 KM","501",NULL,NULL,NULL
+"34","Aren Jaya","RT 006
+RW.015, Aren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.03390010431526","-6.240503612036782","3","2","5G","15 KM","337",NULL,NULL,NULL
+"35","P Lombok","Jl. P.Lombok, RT.006/RW.011, Aren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03163631982201","-6.2442684356307145","7","1","4G","13 KM","688",NULL,NULL,NULL
+"36","gg Karya","RT 003
+RW.001, Duren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.01514783449673","-6.248702549930449","4","2.19","4G","5 KM","272",NULL,NULL,NULL
+"37","Margahayu","RT 002
+RW.004, Margahayu
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","106.99916027598968","-6.252511154296836","10","2","4.5G","5 KM","619",NULL,NULL,NULL
+"38","Dewi Sartika","Jl. Dewi Sartika, RW.008, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.00421627918882","-6.254674265168392","11","1.255499","4.5G","8 KM","281",NULL,NULL,NULL
+"39","Cut Mutia","Jl. Cut Mutia, RW.009, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.00719521275387","-6.254689182362201","4","2.119676","5G","12 KM","541",NULL,NULL,NULL
+"40","Karang Kitri","Jl. Kp. Karang Kitri, RT.003/RW.009, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.01221630795693","-6.253953298785009","11","2.8","5G","4 KM","590",NULL,NULL,NULL
+"41","Joyo Martono","Jl. HM. Joyo Martono, RT.002/RW.021, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.01982093500712","-6.25492805946374","8","1.34490027","4G","14 KM","464",NULL,NULL,NULL
+"42","Komp","Jl. Komp, RT.004/RW.012, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.0150356945346","-6.260766101087168","11","1.45141","5G","8 KM","698",NULL,NULL,NULL
+"43","Margahayu 2","Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17510","107.01996245180395","-6.2629383822323765","6","1.15982464","5G","4 KM","524",NULL,NULL,NULL
+"44","Kalimalang","RT 003
+RW.021, Margahayu
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.02018238315297","-6.260920498218807","3","2.1712","5G","10 KM","316",NULL,NULL,NULL
+"45","Jl Semut Api","Jl. Semut Api, RT.003/RW.011, Margahayu, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17113","107.01850046569753","-6.250459395511047","5","1.0745","5G","6 KM","596",NULL,NULL,NULL
+"46","Moh Yamin","Jl. Prof. Moh. Yamin, RT.004/RW.001, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.01640834258772","-6.246929249358146","11","2.12852184","4G","4 KM","507",NULL,NULL,NULL
+"47","Moh Yamin 2","Jl. Prof. Moh. Yamin, RT.007/RW.005, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02022369638807","-6.246812970669509","3","1.1","4.5G","8 KM","196",NULL,NULL,NULL
+"48","Jl Pahlawan","Jl. Pahlawan, RT.007/RW.004, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02386077176784","-6.2463863651856935","11","2.460428","5G","6 KM","614",NULL,NULL,NULL
+"49","Gg Swadaya","RT 008
+RW.005, Duren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.02041527973212","-6.242870191925222","11","2.322","5G","15 KM","170",NULL,NULL,NULL
+"50","Aren Jaya 2","RT 003
+RW.005, Aren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.04160117842851","-6.235052121539766","3","1.38100602","4.5G","8 KM","658",NULL,NULL,NULL
+"51","Aren Jaya 3","RT 004
+RW.005, Aren Jaya
+Kec. Bekasi Tim.
+Kota Bks
+Jawa Barat","107.03816171831555","-6.234250277276157","11","1","5G","6 KM","600",NULL,NULL,NULL
+"52","Karangsatria","Jl. Al Inaayah Karang Ampel, Karangsatria, Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17568","107.04486724079153","-6.230314734339329","9","2.6139238","4G","7 KM","613",NULL,NULL,NULL
+"53","Sunan Muria","Jl. Sunan Muria 2, RT.004/RW.005, Aren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03830071544142","-6.233208441553449","3","2.697","5G","10 KM","688",NULL,NULL,NULL
+"54","Sunan Giri","Jl. Sunan Giri 3, RT.005/RW.005, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03562711966003","-6.230969641742575","7","2.6153253","4G","4 KM","310",NULL,NULL,NULL
+"55","Karangsatria 2","RT 011
+RW.016, Karangsatria
+Kec. Tambun Utara
+Kabupaten Bekasi
+Jawa Barat","107.0355346032248","-6.228582591652543","4","1.19879001","4G","15 KM","271",NULL,NULL,NULL
+"56","Kp Cerewet","Jl. Raya Karang Satria, RT.003/RW.016, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.03037276013264","-6.227110251779876","9","1.466912002","4G","4 KM","315",NULL,NULL,NULL
+"57","Grand Surya Estate","Grand Surya Estate, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.0280361000955","-6.226699669817279","11","2.20678","4G","12 KM","467",NULL,NULL,NULL
+"58","Bunga Raya","Jalan Pahlawan, Perumahan Bunga Raya, RT.007/RW.016, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02696972707797","-6.23522613749091","5","2.5513076","4.5G","5 KM","189",NULL,NULL,NULL
+"59","Jl Mangga","Jl. Mangga 1, RT.006, Duren Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17111","107.02418077314267","-6.229139513680076","9","2.807","4G","5 KM","300",NULL,NULL,NULL
+"60","Irida Barat","Jl. Irida Barat Dalam III,RT.003/RW.014, Bekasi Jaya, Bekasi Timur, Bekasi, West Java 17112","107.01528586198742","-6.2326637565618395","9","2","5G","12 KM","549",NULL,NULL,NULL
+"61","Agus Salim","Gg. Inpres, RT.001/RW.008, Bekasi Jaya, Kec. Bekasi Tim., Kota Bks, Jawa Barat 17112","107.01458699453217","-6.227594917841592","6","1.6","4G","15 KM","566",NULL,NULL,NULL
