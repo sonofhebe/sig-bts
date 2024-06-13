@@ -86,9 +86,8 @@
                                 return '<a class="btn btn-info btn-sm" href="/bts/form?id=' +
                                     row.id +
                                     '">Detail</a>\
-                                                                                                                                    <a class="btn btn-danger btn-sm delete-data" data-id="' +
-                                    row
-                                    .id +
+                                        <a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                    row.id +
                                     '" href="javascript:;">Delete</a>';
                             }
                         }

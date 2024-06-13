@@ -85,8 +85,23 @@
                             <label for="deskripsi">Deskripsi:</label>
                             <textarea class="form-control" id="deskripsi" name="deskripsi"></textarea>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="status">Status:</label><br>
+                            <select class="col-12" aria-label="Select" id="status" name="status">
+                                <option selected>Pilih Status Report</option>
+                                <option value="terdaftar">terdaftar</option>
+                                <option value="proses">proses</option>
+                                <option value="selesai">selesai</option>
+                                <option value="tunda">tunda</option>
+                                <option value="batal">batal</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="catatan">Catatan:</label>
+                            <textarea class="form-control" id="catatan" name="catatan"></textarea>
+                        </div>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>
@@ -98,17 +113,51 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
+            // Check if URL contains 'id' parameter
+            var urlParams = new URLSearchParams(window.location.search);
+            var Id = urlParams.get('id');
+
+            // If 'id' parameter is present, fetch existing data for updating
+            if (Id) {
+                $('#loader').show();
+                // Make an AJAX request to fetch existing data
+                $.ajax({
+                    url: "/report/getById/" + Id,
+                    method: "GET",
+                    success: function(result) {
+                        // Populate the form with existing data
+                        $('#id').val(result.data.id);
+                        $('#nama_bts').val(result.data.nama_bts);
+                        $('#tingkat_kepentingan').val(result.data.tingkat_kepentingan);
+                        $('#kategori').val(result.data.kategori);
+                        $('#deskripsi').val(result.data.deskripsi);
+                        $('#status').val(result.data.status);
+                        $('#catatan').val(result.data.catatan);
+
+                        $('#loader').hide();
+                    },
+                    error: function(error) {
+                        $('#loader').hide();
+                        console.error("Error fetching BTS data:", error);
+                    }
+                });
+            }
+
             $('#btsForm').submit(function(event) {
                 $('#loader').show();
                 event.preventDefault();
                 var formData = $(this).serialize();
+
+                // Determine whether to create or update based on 'id' parameter
+                var url = Id ? "/report/update" : "/report/store";
+                var type = Id ? "update" : "store";
                 $.ajax({
-                    url: '/report/store',
+                    url: url,
                     method: "POST",
                     data: formData,
                     success: function(result) {
-                        // Redirect back to /bts after 2 seconds
-                        toastr.success('Data store successfully!');
+                        // Redirect back to /report after 2 seconds
+                        toastr.success('Data ' + type + ' successfully!');
                         setTimeout(function() {
                             $('#loader').hide();
                             window.location.href = '/report';
@@ -116,7 +165,7 @@
                     },
                     error: function(error) {
                         $('#loader').hide();
-                        toastr.error('Data store failed!');
+                        toastr.error('Data ' + type + ' failed!');
                     }
                 });
             });

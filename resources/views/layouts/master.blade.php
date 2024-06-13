@@ -124,6 +124,10 @@
                                     class="fal fa-file-signature"></i> <span>Report BTS</span></a>
                         </li>
                         <li>
+                            <a href="/download-report" class="{{ Request::is('user') ? 'active' : '' }}"><i
+                                    class="fal fa-download"></i> <span>Download Report</span></a>
+                        </li>
+                        <li>
                             <a href="/user" class="{{ Request::is('user') ? 'active' : '' }}"><i
                                     class="fal fa-users"></i> <span>User Master</span></a>
                         </li>

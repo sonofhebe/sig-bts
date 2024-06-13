@@ -71,13 +71,40 @@
                             data: 'deskripsi'
                         },
                         {
+                            title: 'Status',
+                            data: 'status',
+                            render: function(data, type, row) {
+                                if (data == "terdaftar") {
+                                    return '<span class="badge">Terdaftar</span>';
+                                } else if (data == "proses") {
+                                    return '<span class="badge" style="background-color:blue;">Proses</span>';
+                                } else if (data == "selesai") {
+                                    return '<span class="badge" style="background-color:green;">Selesai</span>';
+                                } else if (data == "tunda") {
+                                    return '<span class="badge" style="background-color:orange;">Tunda</span>';
+                                } else if (data == "batal") {
+                                    return '<span class="badge" style="background-color:red;">Batal</span>';
+                                } else {
+                                    return '-';
+                                }
+                            }
+                        },
+
+                        {
+                            title: 'Catatan',
+                            data: 'catatan'
+                        },
+                        {
                             title: 'Aksi',
                             data: null,
                             orderable: false,
                             render: function(data, type, row) {
-                                return '<a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                return '<a class="btn btn-info btn-sm" href="/report/form?id=' +
                                     row.id +
-                                    '" href="javascript:;">Delete</a>';
+                                    '">Detail</a>';
+                                // return '<a class="btn btn-danger btn-sm delete-data" data-id="' +
+                                //     row.id +
+                                //     '" href="javascript:;">Delete</a>';
                             }
                         }
                     ]

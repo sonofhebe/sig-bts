@@ -39,8 +39,12 @@ Route::middleware(['laravel'])->group(function () {
             return view('report');
         });
         Route::get('/report/form', function () {
-            $btsList = Bts::all(); // Ambil semua data BTS dari model
-            return view('report-form', ['bts' => $btsList]); // Kirim data BTS ke tampilan 'report'
+            $btsList = Bts::all();
+            return view('report-form', ['bts' => $btsList]);
+        });
+        Route::get('/download-report', function () {
+            $btsList = Bts::all();
+            return view('download-report', ['bts' => $btsList]);
         });
         Route::get('/user', function () {
             return view('user');
@@ -70,7 +74,10 @@ Route::middleware(['laravel'])->group(function () {
 
         // report
         Route::get('/report/get', [WebController::class, 'report_get']);
+        Route::get('/report/getById/{id}', [WebController::class, 'report_getById']);
         Route::post('/report/store', [WebController::class, 'report_store']);
+        Route::post('/report/update', [WebController::class, 'report_update']);
+        Route::post('/report/download', [WebController::class, 'report_download']);
         Route::delete('/report/delete/{id}', [WebController::class, 'report_delete']);
     });
     // Laravel Config Route

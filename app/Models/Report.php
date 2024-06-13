@@ -16,6 +16,9 @@ class Report extends Model
         'tingkat_kepentingan',
         'kategori',
         'deskripsi',
+        'status',
+        'catatan',
+        'tanggal_selesai',
     ];
 
     public $incrementing = false;
